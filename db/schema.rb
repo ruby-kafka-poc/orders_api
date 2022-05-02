@@ -12,9 +12,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_502_130_239) do
+ActiveRecord::Schema[7.0].define(version: 20_220_502_132_446) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
+
+  create_table 'invoices', force: :cascade do |t|
+    t.string 'po'
+    t.integer 'organization_id', null: false
+    t.integer 'customer_id', null: false
+    t.datetime 'date', null: false
+    t.datetime 'deliver_date', null: false
+    t.string 'state'
+    t.bigint 'order_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['order_id'], name: 'index_invoices_on_order_id'
+  end
 
   create_table 'orders', force: :cascade do |t|
     t.string 'po'
@@ -26,4 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 20_220_502_130_239) do
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
   end
+
+  add_foreign_key 'invoices', 'orders'
 end
