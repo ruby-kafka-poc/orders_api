@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_502_132_446) do
+ActiveRecord::Schema[7.0].define(version: 20_220_502_140_137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -27,6 +27,18 @@ ActiveRecord::Schema[7.0].define(version: 20_220_502_132_446) do
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.index ['order_id'], name: 'index_invoices_on_order_id'
+  end
+
+  create_table 'items', force: :cascade do |t|
+    t.string 'itemable_type', null: false
+    t.bigint 'itemable_id', null: false
+    t.integer 'quantity', null: false
+    t.string 'description', null: false
+    t.string 'code', null: false
+    t.decimal 'amount', precision: 11, scale: 2, null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index %w[itemable_type itemable_id], name: 'index_items_on_itemable'
   end
 
   create_table 'orders', force: :cascade do |t|
