@@ -123,3 +123,13 @@ RSpec.describe '/invoices', type: :request do
     end
   end
 end
+
+{
+  po: 'po001',
+  organization_id: 1,
+  customer_id: 1,
+  date: '2022-05-07T07:53:03-00:00',
+  deliver_date: '2022-05-07T07:53:03-00:00',
+  state: 'pending',
+  order_id: nil
+}

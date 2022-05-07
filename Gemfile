@@ -8,8 +8,8 @@ ruby '3.1.2'
 gem 'aasm'
 gem 'dotenv-rails'
 gem 'kafka_rails_integration',
-  git: 'git@github.com:ruby-kafka-poc/rails_kafka_integration.git',
-  ref: '9b33d72' # branch: 'added_lib'
+    git: 'git@github.com:ruby-kafka-poc/rails_kafka_integration.git',
+    ref: '9b33d72' # branch: 'added_lib'
 gem 'karafka', '>= 2.0.0.alpha2'
 gem 'pg'
 gem 'puma', '~> 5.0'
