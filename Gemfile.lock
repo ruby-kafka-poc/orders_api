@@ -1,7 +1,6 @@
 GIT
-  remote: git@github.com:ruby-kafka-poc/rails_kafka_integration.git
-  revision: cc8933872e3e94f311533b76fa293a1c2a641a77
-  ref: cc89338
+  remote: https://github.com/ruby-kafka-poc/rails_kafka_integration.git
+  revision: 01c20a6589a94bcfbcd3ac8f1da8eb1a4786a8d5
   specs:
     kafka_rails_integration (0.1.0)
 
@@ -190,6 +189,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.5-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.13.5-x86_64-linux)
+      racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
@@ -313,6 +314,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   aasm
