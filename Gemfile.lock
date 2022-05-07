@@ -1,7 +1,6 @@
 GIT
-  remote: git@github.com:ruby-kafka-poc/rails_kafka_integration.git
-  revision: cc8933872e3e94f311533b76fa293a1c2a641a77
-  ref: cc89338
+  remote: https://github.com/ruby-kafka-poc/rails_kafka_integration.git
+  revision: 01c20a6589a94bcfbcd3ac8f1da8eb1a4786a8d5
   specs:
     kafka_rails_integration (0.1.0)
 
