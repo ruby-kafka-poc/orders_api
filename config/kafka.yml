@@ -5,12 +5,8 @@ default: &default
   sasl_username: <%= ENV['SASL_USERNAME'] %>
   sasl_password: <%= ENV['SASL_PASSWORD'] %>
   topics:
-    - invoice_created
-    - invoice_deleted
-    - invoice_updated
-    - order_created
-    - order_updated
-    - order_deleted
+    - invoices
+    - orders
 
 test:
   <<: *default
